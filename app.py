@@ -25,7 +25,7 @@ def get_known_databases():
     Returns:
         list: A list of database schema names.
     """
-    logger.info("Getting list of all user databases")
+    logger.info("Getting list of all user")
     json_groupings, _ = get_all_databases()
     json_groupings = json.loads(json_groupings)
     groupings = [item["table_schema"] for item in json_groupings if isinstance(item, dict)]
